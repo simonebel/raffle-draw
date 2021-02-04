@@ -1,5 +1,4 @@
 import '../sass/styles.scss'
-import App from './particule/scripts/App';
 import LocomotiveScroll from 'locomotive-scroll';
 import Cursor from './menu/cursor';
 
