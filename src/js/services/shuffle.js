@@ -1,6 +1,6 @@
 export default class Shuffle {
-  constructor(NAMES) {
-    this.NAMES = ['Boris', 'Simon', 'Jonathan', 'Ted', 'Louis', 'Marin', 'Maxime', 'Zitoun', 'Bouga'];
+  constructor() {
+    this.NAMES = ['Boris', 'Simon', 'Jonathan', 'Ted', 'Louis', 'Marin', 'Maxime', 'Zitoun', 'Bouga', 'Le gros Yass'];
   }
 
   shuffle() {

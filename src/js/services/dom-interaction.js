@@ -2,14 +2,30 @@ import {SplitText as ST} from '../vendors/gsap/SplitText'
 import {gsap } from 'gsap'
 import { clamp, getRatio, wrap, ev, lerp } from '../utils/utils'
 
-
-export default class Table {
-  constructor () {
+export default class DomInteraction {
+  constructor(namesArray) {
     this.names = document.querySelectorAll('.name')
-    this.init()
+    this.NAMES = namesArray;
+    this.button = document.querySelector('.team__shuffle')
+
+    this.init();
+  }
+  bindEvent() {
+    this.button.addEventListener('click', () => {this.updateDom()})
   }
 
   init() {
+    this.bindEvent()
+  }
+
+  updateDom() {
+    console.log(this.NAMES.NAMES[1])
+    for (let i = 0; i < this.NAMES.NAMES.length; i++) {
+      this.names[i].innerText = this.NAMES.NAMES[i]
+    }
+  }
+
+  animate() {
     this.stTexts = new ST(this.names, { type: 'lines', linesClass: 'line' })
 
     this.stTexts.lines.forEach((l) => {
@@ -24,4 +40,4 @@ export default class Table {
     tl.to(".line", time, {top:-100})
     tl.repeat(-1)
   }
-}
+};

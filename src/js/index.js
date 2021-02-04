@@ -1,6 +1,8 @@
 import '../sass/styles.scss'
 import Shuffle from './services/shuffle.js'
 import Table from './services/Table'
+import DomInteraction from './services/dom-interaction.js'
+
 import LocomotiveScroll from 'locomotive-scroll';
 import Cursor from './menu/cursor';
 
@@ -8,16 +10,11 @@ import Cursor from './menu/cursor';
 
 const APP = window.APP || {}
 let names = new Shuffle();
-names = names.shuffle();
-// console.log(names.NAMES);
-// console.log(names.shuffle())
-// console.log(names.shuffle())
-// console.log(names.shuffle())
-// console.log(names.shuffle())
-
+let dom = new DomInteraction(names);
 const initApp = () => {
     window.APP = APP
-    APP.Table = new Table()
+    APP.Shuffle = names;
+
 }
 
 if (document.readyState === 'complete' || (document.readyState !== 'loading' && !document.documentElement.doScroll)) {
