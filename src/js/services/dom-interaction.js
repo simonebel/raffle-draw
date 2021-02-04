@@ -13,7 +13,7 @@ export default class DomInteraction {
     this.init();
   }
   bindEvent() {
-    this.button.addEventListener('click', () => {this.updateDom()})
+    this.button.addEventListener('click', () => {this.animate()})
   }
 
   init() {
@@ -36,10 +36,20 @@ export default class DomInteraction {
       wrap(l, div)
     })
 
-    const tl = gsap.timeline();
+    this.tl = gsap.timeline();
     const time = 0.5
-    tl.fromTo(".line", time, {top:760}, {top:0})
-    tl.to(".line", time, {top:-100})
-    tl.repeat(-1)
+    this.tl.fromTo(".line", time, {top:760}, {top:0})
+    this.tl.to(".line", time, {top:-100})
+    this.tl.eventCallback("onComplete", () => {this.updateDom()})
+
+    this.tl.repeat(-1)
+
+    this.kill()
+  }
+
+  kill() {
+    setTimeout(() => {
+      this.tl.eventCallback("onComplete", this.tl.kill())
+    }, 500)
   }
 };
