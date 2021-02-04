@@ -1,0 +1,217 @@
+body{
+	background-color: #8FA3B5;
+	background-size: cover;
+	min-height: 100%;
+	background-attachment:fixed;
+	background-position:center;
+	background-repeat: no-repeat;
+	overflow-x:hidden;
+	font-family: 'Rubik', sans-serif;
+	scroll-behavior: smooth;
+	cursor: none;
+}
+
+.loader_container{
+	display: block;
+	position: absolute;
+	top: 0;
+	background-color :#FFFAEE;
+	width : 100vw;
+	height: 100vh;
+	z-index: 400;
+
+}
+
+.logo_container{
+	width: 15vw;
+	height: 27vh;
+	position : absolute;
+	top : 35%;
+	left : 40%;
+}
+
+.logo_wrapper{
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+
+/* ----------------------------------- HEADER ----------------------------------- */
+.main_navigation {
+	position: relative;
+	width: 100vw;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.center{
+	max-width: 86%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.index-container {
+	position: relative;
+	width: 100vw;
+	align-items: center;
+	color: #fff;
+}
+
+.masthead-index{
+	padding-top: 19rem;
+	// width : 100em;
+	height: 100vh;
+	align-items: center;
+	color:#FFF;
+	position: relative;
+}
+
+.intro-text {
+	z-index: 2;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width:566px){
+	.intro-text {
+		z-index: 2;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+div.masthead-index .intro-text .intro-heading{
+	text-align: center;
+}
+
+@media (min-width:768px){
+
+	div.masthead-index .intro-text{
+		padding-top:2em;
+		padding-bottom:50px
+	}
+
+	div.masthead-index .intro-text .intro-lead-in{
+		text-transform: uppercase;
+		font-size:10em;
+		font-style:normal;
+		line-height:1em;
+		margin-bottom:25px;
+		letter-spacing: 0.05em;
+		font-weight :700;
+		// font-family:'Montserrat', sans-serif;
+		font-family: 'Bodoni Moda', serif;
+		text-align: center;
+	}
+
+	div.masthead-index .intro-text .intro-heading{
+		font-size:8em;
+		font-style : italic;
+		font-weight:400;
+		letter-spacing: 0.05em;
+		margin-bottom:50px;
+		font-family: 'Bodoni Moda', serif;
+		text-align: center;
+	}
+
+}
+
+// /-------------------------- VIDEO INDEX --------------------------------/
+
+.video_container{
+	position: relative;
+	margin-top: -6em;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+}
+
+.video_wrapper{
+	width: 100%;
+	height: 100%;
+}
+
+.video_wrapper video{
+	width: 100%;
+	height: 100%;
+}
+
+// /-------------------------- TEXT INDEX --------------------------------/
+
+.text_container{
+	position: relative;
+	margin-top : 10em;
+	width : 100%;
+	height: 100%;
+}
+
+.text_disclaimer{
+	text-transform: uppercase;
+	font-size:4em;
+	font-style:normal;
+	line-height:1em;
+	margin-bottom:25px;
+	letter-spacing: 0.05em;
+	font-weight :500;
+	font-family:'Montserrat', sans-serif;
+	text-align: left;
+}
+
+// /-------------------------- MENU NAVIGATION INDEX--------------------------------/
+
+.menu_container{
+	position: relative;
+	margin-top : 10em;
+	width : 100%;
+	height: 100%;
+}
+
+.menu_title{
+	text-transform: uppercase;
+	font-size:4em;
+	font-style:normal;
+	line-height:1em;
+	margin-bottom:25px;
+	letter-spacing: 0.05em;
+	font-weight :500;
+	font-family:'Montserrat', sans-serif;
+	text-align: left;
+}
+
+// /-------------------------- CONTACT INDEX--------------------------------/
+
+.contact_container{
+	position: relative;
+	margin-top : 10em;
+	margin-bottom : 10em;
+	width : 100%;
+	height: 100%;
+}
+
+.contact_title{
+	text-transform: uppercase;
+	font-size:4em;
+	font-style:normal;
+	line-height:1em;
+	margin-bottom:25px;
+	letter-spacing: 0.05em;
+	font-weight :500;
+	font-family:'Montserrat', sans-serif;
+	text-align: left;
+}
+
+// /-------------------------- Scrool--------------------------------/
+
+// .end_scroll{
+// 	position: relative;
+// 	margin-top : 10em;
+// 	margin-bottom : 10em;
+// 	width : 100%;
+// 	height: 100%;
+// }
+
+.index_wrapper{
+	width: 100%;
+	height: auto;
+}

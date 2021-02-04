@@ -1,0 +1,50 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 32rem);
+}
+
+@media screen and (min-width: 53em) {
+    .content {
+        height: 100vh;
+        justify-content: center;
+    }
+}
+
+// /-------------------------- CURSOR --------------------------------/
+
+
+.cursor {
+	display: none;
+}
+
+@media (any-pointer: fine) {
+	.cursor {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+		pointer-events: none;
+    z-index: 100;
+    // mix-blend-mode: difference;
+
+	}
+	.cursor__outter {
+		fill: #E6875C;
+		stroke: #E6875C;
+		stroke-width: var(--cursor-stroke-width);
+    opacity: 0.8;
+
+	}
+
+  .cursor__inner {
+    fill: #E6875C;
+    stroke: #E6875C;
+    stroke-width: var(--cursor-stroke-width);
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,126 @@
+#contact {
+	margin-bottom : 0;
+}
+
+.container_contact{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-top: 9rem;
+}
+
+.text_contact{
+	display: block;
+	align-items: center;
+	color:#FFF;
+	position: relative;
+}
+
+.text_sup{
+	text-transform: uppercase;
+	font-size:10em;
+	font-style:normal;
+	line-height:1em;
+	margin-bottom:1em;
+	letter-spacing: 0.05em;
+	font-weight :700;
+	font-family: 'Bodoni Moda', serif;
+	text-align: left;
+}
+
+.text_sub{
+	font-size:8em;
+	font-style : italic;
+	font-weight:400;
+	letter-spacing: 0.05em;
+	margin-bottom:50px;
+	font-family: 'Bodoni Moda', serif;
+	// text-align: left;
+}
+
+.text_sub{
+	display: inline-block;
+	position: relative;
+	top: 50%;
+	width: 7.1em;
+	margin-left: auto;
+	margin-right: auto;
+	border-right: 2px solid rgba(255,255,255,.75);
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-box-sizing:content-box;
+	box-sizing:content-box;
+}
+
+.contact_list_item{
+	border-style: solid;
+	border-width: 1px 0px 0px;
+	border-top-color : #B3A794;
+	padding-top: 2em;
+	padding-bottom: 8em;
+}
+
+.social_container a {
+	width: auto;
+	display: block;
+	font-size: 36px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+
+.social_container span {
+	width: auto;
+	display: inline-block;
+	font-size: 36px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	transition: 0.2s all ease-in-out;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: -0px;
+		width: 0px;
+		height: 0.05em;
+		margin: 5px 0 0;
+		transition: all 0.2s ease-in-out;
+		transition-duration: 0.5s;
+		opacity: 0;
+		background-color: #B3A794;
+	}
+
+	&.hover-1 {
+		&:before {
+			left: 0;
+		}
+	}
+	&:hover{
+		cursor: pointer;
+		&:before {
+			width: 100% ;
+			opacity: 1;
+		}
+	}
+}
+
+.line-contact-list {
+	height: 1.2em;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.social_link{
+	font-size:4em;
+	font-style : italic;
+	font-weight:400;
+	letter-spacing: 0.05em;
+	font-family: 'Bodoni Moda', serif;
+	text-align: center;
+}
