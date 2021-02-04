@@ -1,11 +1,13 @@
 import {SplitText as ST} from '../vendors/gsap/SplitText'
 import {gsap } from 'gsap'
 import { clamp, getRatio, wrap, ev, lerp } from '../utils/utils'
+import Shuffle from './shuffle';
+
 
 export default class DomInteraction {
-  constructor(namesArray) {
+  constructor() {
     this.names = document.querySelectorAll('.name')
-    this.NAMES = namesArray;
+    this.shuffle = new Shuffle();
     this.button = document.querySelector('.team__shuffle')
 
     this.init();
@@ -19,9 +21,9 @@ export default class DomInteraction {
   }
 
   updateDom() {
-    console.log(this.NAMES.NAMES[1])
-    for (let i = 0; i < this.NAMES.NAMES.length; i++) {
-      this.names[i].innerText = this.NAMES.NAMES[i]
+    this.shuffle.shuffle();
+    for (let i = 0; i < this.shuffle.NAMES.length; i++) {
+      this.names[i].innerText = this.shuffle.NAMES[i]
     }
   }
 
