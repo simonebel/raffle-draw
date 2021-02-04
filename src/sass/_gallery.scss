@@ -1,0 +1,169 @@
+/* GALLERY
+---------------------------------------------------------------------------------------------------- */
+.background_gallery{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -100;
+	background-color: #FFF8ED;
+}
+
+.gallery,
+.main-gallery {
+	height: 300vh;
+	width: 100vw;
+	position: relative;
+}
+
+.content_gallery {
+	display: block;
+	flex-direction: column;
+	width: 100vw;
+	height: calc(100vh - 13rem);
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	max-height: 300px;
+}
+
+.grid {
+	pointer-events: none;
+	position: absolute;
+	width: 110%;
+	height: 110%;
+	top: -5%;
+	left: -5%;
+	display: grid;
+	grid-template-columns: repeat(50,2%);
+	grid-template-rows: repeat(50,2%);
+}
+
+.grid__item {
+	position: relative;
+}
+
+.grid--img .grid__item {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	will-change: transform;
+}
+
+.grid__item-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.grid--img .grid__item-img {
+	flex: none;
+	width: calc(100% + 100px);
+	height: calc(100% + 100px);
+	will-change: transform;
+}
+
+/* Shorthand grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+// Grid 1 square = 32,3 px
+.pos-1 {
+	grid-area: 5 / 6 / 12 / 16;
+  z-index : 0;
+}
+
+.pos-2 {
+	grid-area: 6 / 20 / 13 / 30;
+  z-index : 0;
+}
+
+.pos-3 {
+	grid-area: 5 / 35 / 12 / 45;
+  z-index : 0;
+}
+
+.pos-4 {
+	grid-area: 11 / 3 / 22 / 24;
+  z-index: 10;
+}
+
+.pos-5 {
+	grid-area: 11 / 28 / 22 / 45;
+  z-index: 10;
+}
+
+.pos-6 {
+	grid-area: 19 / 4 / 26 / 14;
+  z-index : 0;
+}
+
+.pos-7 {
+	grid-area: 19 / 16 / 26 / 40;
+  z-index : 0;
+}
+
+.pos-8 {
+	grid-area: 19 / 42 / 26 / 48;
+  z-index : 0;
+}
+
+.pos-9 {
+	grid-area: 22 / 1 / 35 / 30;
+  z-index: 20;
+}
+
+.pos-10 {
+ 	grid-area: 21 / 32 / 34 / 47;
+  z-index: 25;
+}
+
+.pos-11 {
+ 	grid-area: 30 / 5 / 36 / 15;
+  z-index : 0;
+}
+
+.pos-12 {
+ 	grid-area: 31 / 17 / 37 / 35;
+  z-index : 0;
+}
+
+.pos-13 {
+ 	grid-area: 32 / 37 / 38 / 47;
+  z-index : 0;
+}
+
+.pos-14 {
+ 	grid-area: 34 / 3 / 46 / 23;
+  z-index: 20;
+}
+
+.pos-15 {
+ 	grid-area: 34 / 25 / 48 / 49;
+  z-index: 20;
+}
+
+.content__title {
+	font-family: bely-display, sans-serif;
+	font-weight: 400;
+	font-size: 10vw;
+	margin: 0;
+	line-height: 1;
+	position: relative;
+}
+
+.content__title-sub {
+	color: var(--color-content-title-sub);
+	font-size: 4.5vw;
+	display: block;
+	margin-left: 3vw;
+	line-height: 0.5;
+}
+
+
+@media screen and (min-width: 53em) {
+	.content_gallery {
+		height: 100%;
+		justify-content: center;
+		max-height: none;
+	}
+}
