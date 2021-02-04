@@ -1,5 +1,5 @@
 body{
-	background-color: #8FA3B5;
+	background-color: rgb(143, 163, 181);
 	background-size: cover;
 	min-height: 100%;
 	background-attachment:fixed;
@@ -58,7 +58,7 @@ h2{
 	text-align: center;
 }
 
-.grid_container  {
+.grid_container {
 	display : block;
 	width: 100%;
 	height: 100%;
@@ -110,6 +110,11 @@ h2{
 	font-family: 'Bodoni Moda', serif;
 	text-align: center;
 	color: #FFF;
+
+	&__shuffle{
+		width: 100%;
+		color: rgb(0, 0, 0);
+	}
 }
 
 .header {

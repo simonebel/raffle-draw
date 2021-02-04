@@ -7,7 +7,8 @@ import Cursor from './menu/cursor';
 
 
 const APP = window.APP || {}
-// let names = new Shuffle();
+let names = new Shuffle();
+names = names.shuffle();
 // console.log(names.NAMES);
 // console.log(names.shuffle())
 // console.log(names.shuffle())
